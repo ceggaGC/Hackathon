@@ -1,4 +1,25 @@
+--------------------------------------------------------------------------------------
+---------------------------------------Versie 1---------------------------------------
+G:
 om de app aantrekkelijker te maken moet sowiso de lay-out verbeterd worden.
 mooie achtergrond en bijvoorbeeld een bijpassande fonts.
-de opdrachten kunnen meer interactief worden. inplaats van alleen de QR code te scannen kan aan elke code 
-een puzzel of spel zitten. 
+de opdrachten kunnen meer interactief worden. inplaats van alleen de QR code te 
+scannen kan aan elke code een puzzel of spel zitten. 
+---------------------------------------Versie 1---------------------------------------
+--------------------------------------------------------------------------------------
+---------------------------------------Versie 2---------------------------------------
+R:
+Een applicatie zoals onderandere Tomtom,
+Je hebt de app openstaan en de Camera zal dan de hele tijd aan staan of een 
+plattegrond 3D gemaakt van de bibliotheek. Ondertussen dat je rond loopt merkt de app
+aan waar je loopt door een gps signaal wat ook wordt gebruikt bij tomtom,
+Door in te voeren ondertussen wat je zoekt in een database van de bibliotheek 
+kan de app een pad voor jou verwerken die het snelste is om er te komen.
+tijdens het lopen naar de locatie in de bieb wordt in de app vertelt met een pijl 
+welke kant je moet op lopen. Als je voor de boekenkast staat van de door jou gezochte 
+boek die je zocht dan zal de app een melding geven dat de bestemming is bereikt en 
+het boek hier te vinden is in de kast waar je uiteindelijk dus voor staat.
++ eventueel ook een live database er aanvast of het boek eventueel nog wel in de kast 
+  ligt of al is uitgeleend
+---------------------------------------Versie 2---------------------------------------
+--------------------------------------------------------------------------------------
