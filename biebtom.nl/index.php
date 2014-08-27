@@ -1,5 +1,10 @@
 <html>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="style.css">
+=======
+<title>BiebTom.nl</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+>>>>>>> b3da64d526ca8226db1c8eaa62df8adf01f6a72c
 <body>
     <div id="search-bar">
         <div id="search"><input class="searchfield" type="text" name="search" id="search" /></div>
