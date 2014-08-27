@@ -43,7 +43,7 @@ Body {
 	background-image:url(images/biebtom.png);
 	background-repeat:no-repeat;
 	border-radius: 10px;
-	border:solid 4px #222;
+	border:solid 4px #fff;
 }
 input.searchfield {
 	padding:4px;
