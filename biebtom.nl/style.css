@@ -19,11 +19,35 @@ input.searchfield {
 	height:30px;
 	border-radius: 5px;
 }
+#logobar{
+    width: 100%;
+    background-color: rgb(255,255,255);
+    height: 80px;
+}
+#logo{
+    height: 95%;
+}
+
 #page {
-	height: 100%;
+	height: 80%;
 	width: 100%;
 	background-image:url(images/biebtom_leeg.png);
 	background-repeat:no-repeat;
 	background-position: center;
 	background-color: #717171;
+}
+#opdrachten-lijst{
+    width: 10em;
+    height: 20em;
+    position: relative;
+    left: 3em;
+    top: 1em;
+    border: solid 5px black;
+    border-radius: 3px;
+    
+}
+
+#kop{
+    text-align: center;
+    border-bottom: solid 5px black;
 }
