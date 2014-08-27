@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------
 ---------------------------------------Versie 1---------------------------------------
 G:
-om de app aantrekkelijker te maken moet sowiso de lay-out verbeterd worden.
+om de app aantrekkelijker te maken moet sowieso de lay-out verbeterd worden.
 mooie achtergrond en bijvoorbeeld een bijpassande fonts.
 de opdrachten kunnen meer interactief worden. inplaats van alleen de QR code te 
 scannen kan aan elke code een puzzel of spel zitten. 
