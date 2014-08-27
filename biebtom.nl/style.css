@@ -27,6 +27,7 @@ input.searchfield {
 }
 #logo{
     height: 95%;
+    position: relative;
 }
 
 #page {
@@ -51,4 +52,9 @@ input.searchfield {
 #kop{
     text-align: center;
     border-bottom: solid 5px black;
+}
+#zoek-term{
+    margin: -5em auto;
+    height: auto;
+    text-align: center;
 }

@@ -6,7 +6,7 @@
     </div>
     <div id="logobar">
         <img id="logo" src="images/logo.png">
-        <div id="zoek-term">naam van boek</div>
+        <div id="zoek-term"><h1>naam van boek</h1></div>
     </div>
    
     <div id="page">
