@@ -3,8 +3,6 @@ Body {
 	overflow: hidden;
 }
 #search-bar {
-	z-index: 20;
-	float: left;
 	background-color: #555;
 	height: 50px;
 	width: 100%;
@@ -25,18 +23,14 @@ input.searchfield {
     width: 100%;
     background-color: rgb(255,255,255);
     height: 80px;
+
 }
 #logo{
     height: 95%;
 }
 
 #page {
-<<<<<<< HEAD
 	height: 80%;
-=======
-	z-index: 10;
-	height: 100%;
->>>>>>> b3da64d526ca8226db1c8eaa62df8adf01f6a72c
 	width: 100%;
 	background-image:url(images/biebtom_leeg.png);
 	background-repeat:no-repeat;
