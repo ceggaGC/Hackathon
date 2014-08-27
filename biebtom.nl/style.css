@@ -3,6 +3,8 @@ Body {
 	overflow: hidden;
 }
 #search-bar {
+	z-index: 20;
+	float: left;
 	background-color: #555;
 	height: 50px;
 	width: 100%;
@@ -20,6 +22,7 @@ input.searchfield {
 	border-radius: 5px;
 }
 #page {
+	z-index: 10;
 	height: 100%;
 	width: 100%;
 	background-image:url(images/biebtom_leeg.png);

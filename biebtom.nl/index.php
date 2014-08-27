@@ -1,4 +1,5 @@
 <html>
+<title>BiebTom.nl</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
 <div id="search-bar">
