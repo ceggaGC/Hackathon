@@ -1,21 +1,14 @@
 <html>
+	<title>BiebTom - Navigation in the library</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 <body>
-    <div id="search-bar">
-        <div id="search"><input class="searchfield" type="text" name="search" id="search" /></div>
+    <div id="bar">
+        	<div id="search">
+        		<div class="logo"></div>
+        	</div>
     </div>
-    <div id="logobar">
-        <img id="logo" src="images/logo.png">
-        <div id="zoek-term">naam van boek</div>
-    </div>
-   
-    <div id="page">
-         <div id="opdrachten-lijst">
-        <div id="kop">opdrachten</div><br>
-        opdracht 1 <br>
-        opdracht 2 <br>
-        opdracht 3 <br>
-    </div>
-    </div>
+   			<div id="page">
+   				<div class="pg"></div>
+   			</div>
 </body>
 </html>

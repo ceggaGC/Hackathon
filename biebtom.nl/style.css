@@ -1,54 +1,47 @@
 Body {
 	margin: 0px;
+	background-image:url(images/bg.png);
 	overflow: hidden;
 }
-#search-bar {
-	background-color: #555;
-	height: 50px;
-	width: 100%;
+#bar {
+	z-index: 20;
+	padding-top: 2px;
+	padding-left: 5px;
+	background-color:#222;
+	height:48px;
+	width:100%;
+	margin-bottom: 50px;
+}
+.logo{
+	z-index: 21;
+    background-image:url(images/logo_w.png);
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 100%;
+}
+#page {
+	z-index: 10;
+}
+.pg {
+	z-index: 30;
+	width: 809px;
+	height: 495px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image:url(images/biebtom.png);
+	background-repeat:no-repeat;
+	border-radius: 5px;
+	border:solid 2px white;
 }
 input.searchfield {
-	padding: 4px;
-	border: 1px solid #999;
+	padding:4px;
+	border:1px solid #999;
 	background-color:#DBD9D9;
-	font-size: 12px;
-	margin-top: 9px;
-	margin-bottom: 3px;
-	margin-left: 10px;
-	width: 200px;
+	font-size:12px;
+	margin-top:9px;
+	margin-bottom:3px;
+	margin-left:10px;
+	width:200px;
 	height:30px;
-	border-radius: 5px;
-}
-#logobar{
-    width: 100%;
-    background-color: rgb(255,255,255);
-    height: 80px;
-
-}
-#logo{
-    height: 95%;
-}
-
-#page {
-	height: 80%;
-	width: 100%;
-	background-image:url(images/biebtom_leeg.png);
-	background-repeat:no-repeat;
-	background-position: center;
-	background-color: #717171;
-}
-#opdrachten-lijst{
-    width: 10em;
-    height: 20em;
-    position: relative;
-    left: 3em;
-    top: 1em;
-    border: solid 5px black;
-    border-radius: 3px;
-    
-}
-
-#kop{
-    text-align: center;
-    border-bottom: solid 5px black;
+	border-radius:5px;
 }
