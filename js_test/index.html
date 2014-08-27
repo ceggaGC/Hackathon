@@ -5,7 +5,7 @@
 	<meta name="description"content="">
 	<meta name="author"content="Matthieu van den Bosch">
 	<link rel="shortcut icon"href="">
-	<title>js_test</title>
+	<title>BiebTom - Navigation in the library</title>
 	<link href="css/bootstrap.min.css"rel="stylesheet">
 	<link href="css/main.css"rel="stylesheet">
 	<style type="text/css">
@@ -37,13 +37,20 @@
 	</style>
 </head>
 	<body>
+	<div id="navi"><img src="images/navi.png"></div>
+	<div id="bar">
+		<div id="search">
+        		<div class="logo"></div>
+        		<div class="searchcenter"><input type="text" id="query" class="searchfield" placeholder="Destination" disabled>
+					<input type="button" class="btn btn-primary" value="Search!" id="submit"><input type="button" class="btn btn-danger" value="Reset">
+					</div>
+        	</div>
+    	</div>
+	</div>
 	<div class="container">
 		<span id="status"><h2>Set current location (click on map)</h2></span>
-		<input type="text" id="query" placeholder="Destination" disabled>
-		<input type="button" class="btn btn-primary" value="Search!" id="submit">
-		<input type="button" class="btn btn-danger" value="Reset">
         <div id="map">
-        	<img src="img/biebtom_leeg.png">
+        	<img class="pg" src="images/biebtom.png">
         	<div id="verticalLine" class="line"></div>
         	<div id="horizontalLine" class="line"></div>
         	<div id="currPos"></div>
