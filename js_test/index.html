@@ -1,0 +1,177 @@
+<html lang="en"><head><meta http-equiv="Content-Type"content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport"content="width=device-width, initial-scale=1.0">
+	<meta name="description"content="">
+	<meta name="author"content="Matthieu van den Bosch">
+	<link rel="shortcut icon"href="">
+	<title>js_test</title>
+	<link href="css/bootstrap.min.css"rel="stylesheet">
+	<link href="css/main.css"rel="stylesheet">
+	<style type="text/css">
+	#currPos{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background: #27ae60;
+		border-radius: 50%;
+		border: 2px #2c3e50 solid;
+		display: none;
+	}
+	#dest{
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		background: #e74c3c;
+		border-radius: 50%;
+		border: 2px #2c3e50 solid;
+		display: none;
+	}
+	.line{
+		display: none;
+		border: 3px solid red;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+	}
+	</style>
+</head>
+	<body>
+	<div class="container">
+		<span id="status"><h2>Set current location (click on map)</h2></span>
+		<input type="text" id="query" placeholder="Destination" disabled>
+		<input type="button" class="btn btn-primary" value="Search!" id="submit">
+		<input type="button" class="btn btn-danger" value="Reset">
+        <div id="map">
+        	<img src="img/biebtom_leeg.png">
+        	<div id="verticalLine" class="line"></div>
+        	<div id="horizontalLine" class="line"></div>
+        	<div id="currPos"></div>
+        	<div id="dest"></div>
+        	
+        </div>
+    </div>
+        
+	
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jsonquery.js"></script>
+<script>
+// Presets
+$('img').on('dragstart', function(event) { event.preventDefault(); });
+
+// Settings
+var destSet = false;
+var locSet = false;
+var mapDiv = '#map';
+var personLocationDiv = '#currPos';
+var destinationLocationDiv = '#dest';
+var statusDiv = '#status';
+var resetDiv = 'input[value=Reset]';
+var queryDiv = '#query';
+var submitDiv = '#submit';
+
+var positionsArray = [
+				{
+					"name": "horror",
+					"x": 217,
+					"y": 205
+				},
+				{
+					"name": "avontuur",
+					"x": 510,
+					"y": 202
+				},
+				{
+					"name": "thriller",
+					"x": 566,
+					"y": 409
+				},
+				{
+					"name": "detective",
+					"x": 712,
+					"y": 415
+				}
+]
+
+// Methods
+function setLocationByQuery(value, div){
+	$(div).show();
+	var query = jsonsql.query('select * from positionsArray where (name == "'+value+'")');
+	console.log(query[0]['x']+' '+query[0]['y']);
+	var x = parseInt(query[0]['x']);
+	var y = parseInt(query[0]['y']);
+	$(div).css('top', $(mapDiv).offset().top + (y-($(div).height()/2)));
+    $(div).css('left', $(mapDiv).offset().left + (x-($(div).width()/2)));
+}
+function setRelativeLocation(evt, div){
+	$(div).show();
+	var mouseX = evt.pageX - $(mapDiv).offset().left
+	var mouseY = evt.pageY - $(mapDiv).offset().top
+    console.log('MouseX = '+mouseX+' & MouseY = '+mouseY);
+    $(div).css('top', $(mapDiv).offset().top + (mouseY-($(div).height()/2)));
+    $(div).css('left', $(mapDiv).offset().left + (mouseX-($(div).width()/2)));
+}
+function calculateRoute(){
+	var destPos =  [$(destinationLocationDiv).offset().top, $(destinationLocationDiv).offset().left];
+	var currPos =  [$(personLocationDiv).offset().top, $(personLocationDiv).offset().left];
+
+	$('.line').show();
+
+	$('#verticalLine')
+	.css('top', currPos[0]+$(personLocationDiv).height()/2)
+	.css('left', currPos[1]+$(personLocationDiv).width()/2)
+	.css('height', ($(personLocationDiv).width()/2)+(destPos[0]-currPos[0]));
+
+	$('#horizontalLine')
+	.css('left', currPos[1]+$(personLocationDiv).width()/2)
+	.css('top', destPos[0]+$(destinationLocationDiv).height()/2)
+	.css('width', ($(destinationLocationDiv).width()/2)+(destPos[1]-currPos[1]));
+
+	if(destPos[0] <= currPos[0]){
+		$('#verticalLine')
+		.css('top', destPos[0]+$(personLocationDiv).height()/2)
+		.css('left', currPos[1]+$(personLocationDiv).width()/2)
+		.css('height', ($(personLocationDiv).width()/2)+(currPos[0]-destPos[0]));
+	}
+	if(destPos[1] <= currPos[1]){
+		$('#horizontalLine')
+		.css('left', destPos[1]+$(destinationLocationDiv).width()/2)
+		.css('top', destPos[0]+$(destinationLocationDiv).height()/2)
+		.css('width', (currPos[1]-destPos[1])+($(destinationLocationDiv).width()/4));
+	}
+}
+function resetMap(){
+	$(personLocationDiv+', .line,' +destinationLocationDiv).hide();
+	$(queryDiv).prop('disabled', true);
+	destSet = false;
+	locSet = false;
+	$(statusDiv).html('<h2>Set current location (click on map)</h2>');
+}	
+
+// Event(s)
+$(mapDiv).click(function(evt){
+	status++;
+	locSet = true;
+	$(statusDiv).html('<h2>Set destination</h2>');
+	setRelativeLocation(evt, personLocationDiv);
+	$(queryDiv).prop('disabled', false);
+	if(destSet == true){
+		calculateRoute();
+	}
+});
+$(submitDiv).click(function(){
+	destSet = true;
+	if(locSet == true){
+		var value = $(queryDiv).val();
+		setLocationByQuery(value, destinationLocationDiv);
+		calculateRoute();
+		$(queryDiv).val('');
+	}
+	
+})
+$(resetDiv).click(function(){
+	resetMap();
+})
+</script>
+</body>
