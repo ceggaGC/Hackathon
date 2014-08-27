@@ -5,6 +5,7 @@
     <div id="bar">
         	<div id="search">
         		<div class="logo"></div>
+        		<input class="searchfield" type="text" name="search" id="search" />
         	</div>
     </div>
    			<div id="page">
