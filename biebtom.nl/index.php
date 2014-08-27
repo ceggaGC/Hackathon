@@ -5,7 +5,7 @@
     <div id="bar">
         	<div id="search">
         		<div class="logo"></div>
-        		<input class="searchfield" type="text" name="search" id="search" />
+        		<div class="searchcenter"><input class="searchfield" type="text" name="searchbalk" id="searchbalk" /></div>
         	</div>
     </div>
    			<div id="page">
