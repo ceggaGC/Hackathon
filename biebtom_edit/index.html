@@ -193,7 +193,7 @@ $(mapDiv).click(function(evt){
 $(submitDiv).click(function(){
 	submitAction();
 })
-$(submitDiv).keypress(function(e) {
+$(document).keypress(function(e) {
     if(e.which == 13) {
     	submitAction();
     }
