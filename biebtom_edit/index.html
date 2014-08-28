@@ -168,6 +168,15 @@ function checkDisabled(){
 		.css('cursor', 'auto');
 	}
 }
+function submitAction(){
+	destSet = true;
+	if(locSet == true){
+		var value = $(queryDiv).val();
+		setLocationByQuery(value, destinationLocationDiv);
+		calculateRoute();
+		$(queryDiv).val('');
+	}
+}
 
 // Event(s)
 $(mapDiv).click(function(evt){
@@ -182,15 +191,13 @@ $(mapDiv).click(function(evt){
 	}
 });
 $(submitDiv).click(function(){
-	destSet = true;
-	if(locSet == true){
-		var value = $(queryDiv).val();
-		setLocationByQuery(value, destinationLocationDiv);
-		calculateRoute();
-		$(queryDiv).val('');
-	}
-	
+	submitAction();
 })
+$(submitDiv).keypress(function(e) {
+    if(e.which == 13) {
+    	submitAction();
+    }
+});
 $(resetDiv).click(function(){
 	resetMap();
 })
