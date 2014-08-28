@@ -2,8 +2,8 @@ Hackathon - Biebtom
 =========
 
   Developers
-    Ringo *achternaam*
-    Goran *achternaam*
+    Ringo 
+    Goran
     Matthieu van den Bosch
 
   Description
