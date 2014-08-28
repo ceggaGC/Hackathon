@@ -3,8 +3,8 @@ Hackathon - Biebtom
 
   Developers
   
-    Ringo -achternaam-
-    Goran -achternaam-
+    Ringo Content
+    Goran Cederburg
     Matthieu van den Bosch
 
   Description
